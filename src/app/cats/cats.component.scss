@@ -1,0 +1,58 @@
+:host ::ng-deep mat-grid-list {
+  padding: 0
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  margin: 5vh auto;
+
+  .cats-grid {
+    width: 75%;
+
+    .cat-tile {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 10px;
+
+      .cat-image {
+        width: 100%;
+        height: 80%;
+      }
+    }
+  }
+
+  .mat-grid-tile-content {
+    border: 2px solid #FFAEC9;
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    height: 20%;
+    border: 2px solid #FFAEC9;
+    padding: 10px;
+
+    .count-filter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      .limit-slider {
+        width: 100%;
+      }
+    }
+
+    .breed-filter {
+      width: 80%;
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,43 @@
+<div class="container">
+  <mat-grid-list class="cats-grid"
+    cols="4"
+    rowHeight="4:3"
+    gutterSize='10px'>
+    <mat-grid-tile *ngFor="let cat of cats$ | async">
+      <div class="cat-tile">
+        <img
+          src="{{ cat.url }}"
+          alt="{{ cat.id }}"
+          class="cat-image">
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <div class="filters">
+    <div class="count-filter">
+      <h2>Count of images</h2>
+      <mat-slider class="limit-slider"
+        discrete
+        color="primary"
+        aria-label="units"
+        min="0"
+        max="50"
+        step="1"
+        (change)="onFilterChange()">
+        <input matSliderThumb [(value)]=quantity>
+      </mat-slider>
+    </div>
+    <mat-form-field>
+      <mat-label>select breed</mat-label>
+      <mat-select
+        [(value)]=breedId
+        (selectionChange)="onFilterChange()"
+        class="breed-filter">
+        <mat-option
+          *ngFor="let breed of breeds"
+          [value]="breed.id">
+          {{ breed.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
