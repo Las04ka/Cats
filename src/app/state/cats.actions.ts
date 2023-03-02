@@ -1,6 +1,6 @@
-import { createAction, props } from "@ngrx/store";
+import { createAction, props } from '@ngrx/store';
 
-import { Cat } from "../cats";
+import { Cat } from '../cats';
 
 export const loadCats = createAction(
   '[Cats] Load Cats',

@@ -29,7 +29,7 @@ export class CatsComponent implements OnInit {
     this.store.dispatch(loadCats({limit: 10}))
   }
 
-  onFilterChange() {
+  onFilterChange(): void {
     this.store.dispatch(
       loadCats({limit: this.quantity, breed:this.breedId}))
   }

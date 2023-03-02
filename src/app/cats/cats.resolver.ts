@@ -5,8 +5,8 @@ import {
   ActivatedRouteSnapshot
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Breed } from "./models";
-import { CatsService } from "../services/cats.service";
+import { Breed } from './models';
+import { CatsService } from '../services/cats.service';
 
 @Injectable({
   providedIn: 'root'

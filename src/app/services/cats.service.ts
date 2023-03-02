@@ -12,9 +12,9 @@ export class CatsService {
   }
 
   getCats(limit = 10, breed_ids?:string): Observable<Cat[]> {
-    return this.http.get<Cat[]>('https://api.thecatapi.com/v1/images/search', {
-      params: this.getCatsParams(limit,breed_ids),
-    }).pipe(map((cats) =>
+    return this.http.get<Cat[]>('https://api.thecatapi.com/v1/images/search',
+      {params: this.getCatsParams(limit,breed_ids)})
+      .pipe(map((cats) =>
       cats.map((cat) => ({
         id: cat.id,
         url: cat.url,

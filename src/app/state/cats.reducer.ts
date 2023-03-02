@@ -1,8 +1,8 @@
 import { createReducer, createSelector, on } from '@ngrx/store';
 
-import { loadCatsFail, loadCatsSuccess } from "./cats.actions";
-import { Breed, Cat } from "../cats";
-import { AppState } from "./state";
+import { loadCatsFail, loadCatsSuccess } from './cats.actions';
+import { Breed, Cat } from '../cats';
+import { AppState } from './state';
 
 export interface CatsState {
   cats: Cat[]
